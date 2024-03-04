@@ -1,16 +1,22 @@
+import { MarioFogo } from "./marioFogo";
+import { MarioGrande } from "./marioGrande";
 import { IMarioState } from "./marioInterface";
 
-export class MarioPequeno implements IMarioState {
+export class MarioCapa implements IMarioState {
     pegarFlor(): IMarioState {
-        throw new Error("Method not implemented.");
+        console.log("Mario pegou a Flor");
+        return new MarioFogo;
     }
     pegarCogumelo(): IMarioState {
-        throw new Error("Method not implemented.");
+        console.log("Mario pegou o Cogumelo");
+        return this;
     }
     pegarPena(): IMarioState {
-        throw new Error("Method not implemented.");
+        console.log("Mario pegou uma pena");
+        return this;
     }
     levarDano(): IMarioState {
-        throw new Error("Method not implemented.");
+        console.log("Mario recebeu dano");
+        return new MarioGrande;
     }   
 }
