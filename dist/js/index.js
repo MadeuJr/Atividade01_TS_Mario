@@ -1,1 +1,10 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const mario_1 = require("./model/mario/mario");
+const MeuMario = new mario_1.Mario;
+MeuMario.mudarStatus(MeuMario.pegarCogumelo());
+MeuMario.mudarStatus(MeuMario.levarDano());
+MeuMario.mudarStatus(MeuMario.pegarFlor());
+MeuMario.mudarStatus(MeuMario.levarDano());
+MeuMario.mudarStatus(MeuMario.pegarPena());
+MeuMario.mudarStatus(MeuMario.levarDano());

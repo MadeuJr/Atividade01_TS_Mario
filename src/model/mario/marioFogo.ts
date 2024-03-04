@@ -1,22 +1,22 @@
-import { MarioCapa } from "./marioCapa";
-import { MarioGrande } from "./marioGrande";
-import { IMarioState } from "./marioInterface";
+import { MarioCapa } from './marioCapa';
+import { MarioGrande } from './marioGrande';
+import { IMarioState } from './marioInterface';
 
 export class MarioFogo implements IMarioState {
     pegarFlor(): IMarioState {
-        console.log("Mario pegou a Flor");
+        console.log('Mario pegou a Flor e continua Mario Fogo');
         return this;
     }
     pegarCogumelo(): IMarioState {
-        console.log("Mario pegou o Cogumelo");
+        console.log('Mario pegou o Cogumelo e continua Mario Fogo');
         return this;
     }
     pegarPena(): IMarioState {
-        console.log("Mario pegou uma pena");
-        return new MarioCapa;
+        console.log('Mario pegou uma pena e virou Mario Capa');
+        return new MarioCapa();
     }
     levarDano(): IMarioState {
-        console.log("Mario recebeu dano");
-        return new MarioGrande;
-    }  
+        console.log('Mario recebeu dano e virou Mario Grande');
+        return new MarioGrande();
+    }
 }

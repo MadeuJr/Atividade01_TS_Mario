@@ -1,7 +1,6 @@
-export interface IMarioState{
+export interface IMarioState {
     pegarFlor(): IMarioState;
     pegarCogumelo(): IMarioState;
     pegarPena(): IMarioState;
     levarDano(): IMarioState;
 }
-

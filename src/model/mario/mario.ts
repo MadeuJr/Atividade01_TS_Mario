@@ -1,8 +1,30 @@
-import { IMarioState } from "./marioInterface"
+import { IMarioState } from './marioInterface';
+import { MarioPequeno } from './marioPequeno';
 
-class Mario {
+export class Mario {
     private state: IMarioState;
-    constructor(){
-        // TODO Fazer classes
+    constructor() {
+        this.state = new MarioPequeno();
     }
+
+    mudarStatus(state: IMarioState): void {
+        this.state = state;
+    }
+
+    pegarCogumelo():IMarioState{
+        return this.state.pegarCogumelo()
+    }
+
+    pegarFlor(): IMarioState{
+        return this.state.pegarFlor();
+    }
+
+    pegarPena():IMarioState{
+        return this.state.pegarPena()
+    }
+
+    levarDano():IMarioState{
+        return this.state.levarDano();
+    }
+    
 }
